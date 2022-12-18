@@ -1,0 +1,36 @@
+footer{
+    width: 100vw;
+    height: 300px;
+    background-color: var(--corFooter-color);
+}
+
+footer .row{
+    height: 100%;
+    
+}
+
+/* Informações */
+.info, .info .row{
+    font-family: var(--fontePrincipal-fonts);
+    color: #cecece;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.info .row p{
+    overflow: hidden;
+}
+
+/* Redes Sociais */
+
+.social, .social .row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

@@ -1,0 +1,32 @@
+.navbar{
+    background-color: var(--corPrincipalTrasnparente-color);
+    
+}
+
+#logo{
+    padding: 10%;
+    background-color: var(--corPrincipal-color);
+    border-radius: 50%;
+}
+
+ul{
+    gap: 3%;
+}
+
+.nav-link{
+    font-family: var(--fontePrincipal-fonts);
+    font-size: 20px;
+    font-weight: bolder;
+    transition: 1s;
+    color: #cecece;
+}
+
+.nav-link:hover{
+    border-bottom: 1px solid #0dd13a;
+    color: #cecece;
+    transition: 1s;
+}
+
+.nav-link.active-link{
+    color: var(--corPrincipal-color);
+}

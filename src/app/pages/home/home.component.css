@@ -1,0 +1,84 @@
+section{
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
+
+h1{
+    font-family: 'Poiret One', cursive;
+    color: #fff;
+    text-shadow: 1px 2px 1px #000;
+    overflow-y: hidden;
+}
+
+h4{
+    font-family: var(--fontePrincipal-fonts);
+    color: #cecece;
+    text-shadow: 1px 2px 1px #000;
+    overflow-y: hidden;
+}
+
+h1,h4{
+    padding-left: 10%;
+}
+
+#home{
+    width: 100vw;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-left{
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.col-right{
+    min-height: 30vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.col-right-itens{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.col-right button{
+    border: 0px;
+    border-radius: 1%;
+    padding: 4px 100px 4px;
+    font-family: var(--fontePrincipal-fonts);
+    font-size: 22px;
+    background-color: var(--corPrincipalTrasnparente-color);
+    text-shadow: 2px 1px #000;
+    border-bottom: 3px #cecece;
+    color: #cecece;
+}
+
+.col-right button:hover{
+    border-top: 1px solid #fff;
+}
+
+.icons{
+    padding: 5px;
+    background-color: #cecece44;
+    border-radius: 3%;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    box-shadow: 1px 3px 5px #000;
+}
