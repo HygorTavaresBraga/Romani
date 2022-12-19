@@ -1,3 +1,22 @@
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
-<img src="https://user-images.githubusercontent.com/92002985/208319919-300078c5-7450-40d3-bc43-5296a204624f.png">
+<div align="center">
+  <p><strong>Idealização do Projeto: Site de restaurante vegetariano</strong></p>
+  <br>
+  <p>O Romani foi idealizado por mim durante meus estudos de Angular.</p>
+  <br>
+  
+  <br>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Angular-777BB4?style=for-the-badge&logo=angular&logoColor=white"/>
+  <br><br>
+  
+  <strong>
+  ⚙️ <i>O Site possui as seguintes funcionalidades</i> ⚙️
+  
+  <br><br>
+  EM BREVE...
+    
+  </strong>
+
 
