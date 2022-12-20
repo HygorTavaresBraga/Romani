@@ -1,0 +1,64 @@
+.titulo{
+    text-align: center;
+    
+}
+
+.titulo h1{
+    font-family: 'Poiret One', cursive;
+    color: #fff;
+    text-shadow: 1px 2px 1px #000;
+    overflow-y: hidden;
+    padding-top: 15px;
+}
+
+h3,h6{
+    overflow-y:hidden;
+}
+
+.sobre{
+    background-color: rgb(255, 255, 255, 0.3);
+    border-top: 5px solid var(--corPrincipalTrasnparente-color);
+    border-bottom: 5px solid var(--corPrincipalTrasnparente-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60vw;
+    min-height: 80vh;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.sobre-area{
+    width: 100vw;
+    min-height: 90vh;
+    background-image: url("../../../assets/about/sobre.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto{
+    background-color: antiquewhite;
+    
+}
+
+.imagem{
+    background-color: bisque;
+    text-align: center;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+span{
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+@media(max-width:1260px){
+    .col-sm-6{
+        width: 100%;
+    }
+}

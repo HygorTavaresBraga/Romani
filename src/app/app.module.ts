@@ -7,9 +7,9 @@ import { HeaderComponent } from './sharepages/header/header.component';
 import { FooterComponent } from './sharepages/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
-import { SchedulingComponent } from './pages/scheduling/scheduling.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { MenuComponent } from './pages/menu/menu.component';
+import { ReserveComponent } from './pages/reserve/reserve.component';
 
 @NgModule({
   declarations: [
@@ -17,10 +17,9 @@ import { MenuComponent } from './pages/menu/menu.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    AboutComponent,
-    SchedulingComponent,
     ProfileComponent,
-    MenuComponent
+    MenuComponent,
+    ReserveComponent
   ],
   imports: [
     BrowserModule,

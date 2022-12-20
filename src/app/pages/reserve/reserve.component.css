@@ -1,0 +1,85 @@
+.titulo{
+    text-align: center;
+    
+}
+
+.titulo h1{
+    font-family: 'Poiret One', cursive;
+    color: #fff;
+    text-shadow: 1px 2px 1px #000;
+    overflow-y: hidden;
+    padding-top: 15px;
+}
+
+.agendamento-area{
+    width: 100vw;
+    min-height: 90vh;
+    background-image: url("../../../assets/reserve/agendamento.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.agendamento-area img{
+    width: 100%;
+}
+
+.agendamento{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50vw;
+    min-height: 80vh;
+}
+
+
+label{
+    color: #fff;
+    font-weight: bolder;
+    text-shadow: 1px 1px #000;
+}
+
+#aviso{
+    color: #cecece;
+    text-shadow: 1px 1px #000;
+}
+
+input, select{
+    cursor: pointer;
+    background-color: rgb(15, 31, 8, 0.6);
+    color: #fff;
+    font-weight: bolder;
+    text-shadow: 1px 1px #000;
+    border-radius: 0px;
+}
+
+input:focus, select:focus{
+    border: 1px solid #fff;
+    box-shadow: none !important;
+}
+
+form{
+    background-color: rgb(255, 255, 255, 0.3);
+    padding: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+button{
+    width: 100%;
+    border: 0px;
+    border-radius: 1%;
+    font-family: var(--fontePrincipal-fonts);
+    font-size: 22px;
+    background-color: rgb(15, 31, 8, 0.9);
+    text-shadow: 2px 1px #000;
+    border-bottom: 3px #cecece;
+    color: #cecece;
+    transition: 1s;
+}
+
+button:hover{
+    background-color: rgb(15, 31, 8, 0.6);
+    transition: 1s;
+}

@@ -1,6 +1,5 @@
 .titulo{
     text-align: center;
-    
 }
 
 .titulo h1{
@@ -8,7 +7,6 @@
     color: #fff;
     text-shadow: 1px 2px 1px #000;
     overflow-y: hidden;
-    padding-top: 15px;
 }
 
 .cardapio-area{
@@ -26,7 +24,27 @@
 }
 
 .cardapio{
-    background-color: aqua;
     width: 50vw;
     min-height: 80vh;
+}
+
+h5,h6{
+    overflow-y: hidden;
+}
+
+#pin{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+strong{
+    font-family: 'MatrixIIScriptOT-Bold';
+    font-style: italic;
+}
+
+@media(max-width:1190px){
+    .cardapio-area{
+        background-image: url("../../../assets/menu/cardapio-resize.jpg");
+    }
 }
