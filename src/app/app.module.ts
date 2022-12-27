@@ -10,6 +10,16 @@ import { AboutComponent } from './pages/about/about.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { ReserveComponent } from './pages/reserve/reserve.component';
+import { AcessoComponent } from './pages/acesso/acesso.component';
+import { CadastroComponent } from './pages/cadastro/cadastro.component';
+import { ReservesComponent } from './pages/reserves/reserves.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask, IConfig } from 'ngx-mask';
+
+
 
 @NgModule({
   declarations: [
@@ -19,13 +29,23 @@ import { ReserveComponent } from './pages/reserve/reserve.component';
     HomeComponent,
     ProfileComponent,
     MenuComponent,
-    ReserveComponent
+    ReserveComponent,
+    AboutComponent,
+    AcessoComponent,
+    CadastroComponent,
+    ReservesComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxMaskDirective,
+    NgxMaskPipe,
   ],
-  providers: [],
+  providers: [provideNgxMask()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -16,18 +16,10 @@
                         <h5> <strong> Entradas </strong> </h5>
                     </div>
 
-                    <div class="entradas">
+                    <div class="entradas" *ngFor="let entrada of entradasData">
 
-                        <div class="mb-2">                           
-                            <h6>Pão artesanal de cuscuz de milho • ricota cremosa, azeitonas</h6>
-                        </div>
-
-                        <div class="mb-2">                            
-                            <h6>Tomate tonatto • tomates orgânicos fatiados finíssimos, com molho tonatto, farofa de pão e bottarga</h6>
-                        </div>
-
-                        <div class="mb-2">                            
-                            <h6>Salada de pêssego, mozarela de búfala, rúcula, hortelã e parmesão</h6>
+                         <div class="mb-2">                           
+                            <h6>{{entrada.nome}} • {{entrada.descricao}} • {{"R$"+entrada.valor+",00"}}</h6>
                         </div>
 
                     </div>
@@ -39,18 +31,10 @@
                         <h5> <strong> Principais </strong> </h5>
                     </div>
 
-                    <div class="principais">
+                    <div class="principais" *ngFor="let principais of principaisData">
 
                         <div class="mb-2">                            
-                            <h6>Capellini com cogumelos orgânicos, mascarpone, limão siciliano e salsinha</h6>
-                        </div>
-
-                        <div class="mb-2">                            
-                            <h6>Cogumelos assados no forno a lenha, creme de castanhas, pão achatado (vegano)</h6>
-                        </div>
-
-                        <div class="mb-2">                            
-                            <h6>Fettuccine Alfredo • fettuccine, queijo parmesão e manteiga</h6>
+                            <h6>{{principais.nome}} • {{principais.descricao}} • {{"R$"+principais.valor+",00"}}</h6>
                         </div>
 
                     </div>
@@ -62,31 +46,24 @@
                         <h5> <strong> Sobremesas </strong> </h5>
                     </div>
 
-                    <div class="sobremesas">                        
-                            
-                        <h6 class="mb-2">Capellini com cogumelos orgânicos, mascarpone, limão siciliano e salsinha</h6>
- 
-                       
-                            <h6>Cogumelos assados no forno a lenha, creme de castanhas, pão achatado (vegano)</h6>
-                        </div>
+                    <div class="sobremesas" *ngFor="let sobremesa of sobremesasData">                        
 
-                        <div class="mb-2">
-                            
-                            <h6>Fettuccine Alfredo • fettuccine, queijo parmesão e manteiga</h6>
-                        </div>
-
-                        <img class="mt-5" src="assets/menu/detalhe.png" alt="Detalhe">
+                        <div class="mb-2">                            
+                            <h6>{{sobremesa.nome}} • {{sobremesa.descricao}} • {{"R$"+sobremesa.valor+",00"}}</h6>
+                        </div> 
+                        
                     </div>
 
-                 
+                    <img class="mt-5" src="assets/menu/detalhe.png" alt="Detalhe">
 
                 </div>
             </div>
 
         </div>
   
-
+    </div>
 </section>
+
 
 
 

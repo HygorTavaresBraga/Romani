@@ -1,0 +1,64 @@
+#acesso{
+    height: 100vh;
+    display: flex;
+    justify-content: right;
+
+}
+
+.col-sm-4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255, 0.2);
+}
+
+label{
+    color: #fff;
+    font-weight: bolder;
+    text-shadow: 1px 1px #000;
+}
+
+input{
+    background-color: rgb(15, 31, 8, 0.6);
+    color: #fff;
+    border-radius: 0px;
+
+}
+
+input:focus{
+    border: 1px solid #fff;
+    box-shadow: none !important;
+}
+
+button{
+    width: 100%;
+    border: 0px;
+    border-radius: 1%;
+    font-family: var(--fontePrincipal-fonts);
+    font-size: 22px;
+    background-color: rgb(15, 31, 8, 0.9);
+    text-shadow: 2px 1px #000;
+    border-bottom: 3px #cecece;
+    color: #cecece;
+    transition: 1s;
+    overflow-y: hidden;
+}
+
+button:hover{
+    background-color: rgb(15, 31, 8, 0.6);
+    transition: 1s;
+}
+
+a, a:hover{
+    text-decoration: none;
+    color: #cecece;
+    text-shadow: 1px 1px #000;
+
+}
+
+input:focus{
+  color: #fff;
+  border: 1px solid #fff;
+  box-shadow: none !important;
+  background-color: rgb(15, 31, 8, 0.6);
+}

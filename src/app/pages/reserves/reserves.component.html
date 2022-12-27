@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div id="tabela" class="row">
+
+    <div class="col-sm-7 p-0">
+
+      <table class="table text-center">
+        <thead>
+
+          <tr>
+            <th scope="col">Reserva</th>
+            <th scope="col">Cliente</th>
+            <th scope="col">Unidade</th>
+            <th scope="col">Quantidade</th>
+            <th scope="col">Data</th>
+            <th scope="col">Hora</th>
+            <th scope="col">Status</th>
+            <th scope="col">Ações</th>
+          </tr>
+
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let reserva of reserves">
+            <td>{{ reserva.idReserva }}</td>
+            <td>{{ reserva.idUsuario }}</td>
+            <td>{{ reserva.unidade }}</td>
+            <td>{{ reserva.qtdPessoas }}</td>
+            <td>{{ reserva.data }}</td>
+            <td>{{ reserva.hora }}</td>
+            <td>{{ reserva.status }}</td>
+
+            <td class="d-flex">
+              <button (click)="editarReserva(reserva)" id="editar">Editar</button>
+              <button (click)="excluirReserva(reserva)" id="excluir">Excluir</button>
+            </td>
+          </tr>
+
+
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
+</div>

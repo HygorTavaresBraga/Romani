@@ -43,7 +43,7 @@ strong{
     font-style: italic;
 }
 
-@media(max-width:1190px){
+@media(max-width:1355px){
     .cardapio-area{
         background-image: url("../../../assets/menu/cardapio-resize.jpg");
     }
