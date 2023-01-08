@@ -1,6 +1,6 @@
 .navbar{
     background-color: var(--corPrincipalTrasnparente-color);
-    
+
 }
 
 #logo{
@@ -30,3 +30,21 @@ ul{
 .nav-link.active-link{
     color: var(--corPrincipal-color);
 }
+
+button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 0px;
+  background-color: var(--corPrincipalTrasnparente-color);
+  padding: 5px 20px 4px 15px;
+  color: #fff;
+
+}
+
+button:hover{
+  border-bottom: 1px solid #fff;
+}
+
+

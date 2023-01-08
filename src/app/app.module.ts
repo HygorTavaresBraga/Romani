@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask, IConfig } from 'ngx-mask';
+import { EditReserveComponent } from './pages/edit-reserve/edit-reserve.component';
 
 
 
@@ -34,6 +35,7 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask, IConfig } from 'ngx-mask
     AcessoComponent,
     CadastroComponent,
     ReservesComponent,
+    EditReserveComponent,
 
   ],
   imports: [

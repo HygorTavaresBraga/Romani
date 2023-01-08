@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Reserves } from '../reserves';
+import { Reserves } from '../models/reserves';
 
 @Injectable({
   providedIn: 'root'

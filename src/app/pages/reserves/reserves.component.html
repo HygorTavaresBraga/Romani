@@ -30,8 +30,17 @@
             <td>{{ reserva.status }}</td>
 
             <td class="d-flex">
-              <button (click)="editarReserva(reserva)" id="editar">Editar</button>
-              <button (click)="excluirReserva(reserva)" id="excluir">Excluir</button>
+
+              <div>
+                <a href="Editar/Reserva/{{reserva.idReserva}}">
+                  <button (click)="editarReserva(reserva)" id="editar">Editar</button>
+                </a>
+              </div>
+
+              <div>
+                <button (click)="excluirReserva(reserva)" id="excluir">Excluir</button>
+              </div>
+
             </td>
           </tr>
 

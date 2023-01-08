@@ -11,8 +11,8 @@
                 <div class="agendamento">
                     <div class="row">
                         <div class="col-sm-6 mx-auto">
-                            
-                       
+
+
                     <form class="mt-4 mb-4">
                         <div class="mb-3">
                           <label for="Unidade" class="form-label">Unidade</label>
@@ -47,9 +47,13 @@
                             <input type="time" name="Horario" id="Horario" class="form-control">
                         </div>
 
-                        <div class="mb-3">
-                            <button type="submit" class="btn btn-primary">Reservar</button>
+                        <div class="mb-3" *ngIf="logoutBtn">
+                            <button  class="btn btn-primary">Reservar</button>
                         </div>
+
+                        <div class="mb-3" *ngIf="loginBtn">
+                          <a [routerLink]="['/Acesso']"> <button class="btn btn-primary">Reservar</button></a>
+                      </div>
                     </form>
 
                 </div>

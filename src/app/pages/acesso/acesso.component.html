@@ -2,16 +2,16 @@
     <div id="acesso" class="row">
         <div class="col-sm-4">
 
-            <form>
+            <form [formGroup]="acesso" (ngSubmit)="acessar(acesso)" autocomplete="off">
 
                 <div class="mb-2">
                     <label for="Email" class="form-label">Email</label>
-                    <input type="email" class="form-control">
+                    <input type="email" name="email" formControlName="email" autocomplete="off" class="form-control">
                 </div>
 
                 <div class="mb-4">
                     <label for="Senha" class="form-label">Senha</label>
-                    <input type="password" class="form-control">
+                    <input type="password" name="senha" formControlName="senha" autocomplete="off" class="form-control">
                 </div>
 
                 <button type="submit">Acessar</button>
@@ -19,10 +19,10 @@
                 <div class="text-center mt-3">
                     <a [routerLink]="['/Cadastro']">não possuo acesso</a>
                 </div>
-                
+
             </form>
 
         </div>
-        
+
     </div>
 </div>

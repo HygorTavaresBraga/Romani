@@ -11,7 +11,7 @@
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100">
-        
+
           <li class="nav-item">
             <a class="nav-link" routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Início</a>
           </li>
@@ -30,11 +30,21 @@
 
         </ul>
 
-        <ul class="navbar-nav">
+        <ul class="navbar-nav" *ngIf="loginBtn">
             <li class="nav-item">
                 <a class="nav-link" routerLink="Acesso" routerLinkActive="active-link">Acesso</a>
             </li>
         </ul>
+
+        <ul class="navbar-nav" *ngIf="logoutBtn">
+          <li class="nav-item">
+              <button (click)="logout()">
+
+                  <img src="../../../assets/header/logout.png" width="15" height="15">
+
+              </button>
+          </li>
+      </ul>
 
       </div>
     </div>

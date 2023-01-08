@@ -5,7 +5,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  background-image: url("../../../assets/adm/adm.jpg");
+  background-size: cover;
 }
 
 thead{

@@ -50,8 +50,8 @@ cadastrar(){
     ){
 
     this.usuarioService.createClient(this.cadastro.value).subscribe();
-    this.router.navigate(['/']);
-    
+    this.router.navigate(['Acesso']);
+
   }
 
 
