@@ -12,20 +12,24 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100">
 
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="!acesso">
             <a class="nav-link" routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Início</a>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="!acesso">
             <a class="nav-link" routerLink="Cardapio" routerLinkActive="active-link">Cardápio</a>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="!acesso">
             <a class="nav-link" routerLink="Reserva" routerLinkActive="active-link">Reserva</a>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="!acesso">
             <a class="nav-link" routerLink="Sobre" routerLinkActive="active-link">Sobre Nós</a>
+          </li>
+
+          <li class="nav-item" *ngIf="acesso">
+            <a class="nav-link" routerLink="Reservas" routerLinkActive="active-link">Reservas</a>
           </li>
 
         </ul>

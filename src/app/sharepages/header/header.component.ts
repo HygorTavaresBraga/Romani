@@ -4,6 +4,7 @@ import { UsuarioService } from 'src/app/usuario/usuario.service';
 
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -11,6 +12,8 @@ import { Router } from '@angular/router';
 })
 
 export class HeaderComponent {
+
+acesso!: boolean;
 
 loginBtn:boolean;
 logoutBtn:boolean;
@@ -22,9 +25,20 @@ constructor(private usuarioService: UsuarioService, private router: Router){
 
   if(this.usuarioService.isLoggedIn()){
 
-    console.log('logado');
+    // console.log('logado');
     this.loginBtn = false;
     this.logoutBtn = true;
+
+    if(this.usuarioService.getAcesso() == 'Adm'){
+
+      this.acesso = true;
+
+    }else{
+
+      this.acesso = false;
+
+    }
+
 
   }else{
 
@@ -33,7 +47,14 @@ constructor(private usuarioService: UsuarioService, private router: Router){
 
   }
 
+
+
+
+
+
 }
+
+
 
 private changeName(name: boolean): void{
   this.logoutBtn = name;
@@ -42,7 +63,7 @@ private changeName(name: boolean): void{
 
 logout(){
   this.usuarioService.deleteToken();
-  this.router.navigate(['/']);
+  this.usuarioService.deleteAcesso();
   window.location.href = window.location.href;
 }
 

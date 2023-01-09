@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ReservesComponent implements OnInit {
 
   reserves: any;
-  
+
   constructor( private reserveService: ReservasService ){ }
 
   ngOnInit(): void {
@@ -20,6 +20,8 @@ export class ReservesComponent implements OnInit {
         this.reserves = result.data;
       }
     )
+
+
 
   }
 

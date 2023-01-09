@@ -11,6 +11,7 @@ import { first } from 'rxjs';
 })
 export class AcessoComponent implements OnInit {
 
+  nivelAcesso!: string;
   acesso:FormGroup;
 
 constructor(
@@ -34,6 +35,8 @@ ngOnInit(): void {
 
 }
 
+
+
 acessar(acesso:any){
 
   // console.log(acesso.get('email').value);
@@ -43,12 +46,23 @@ acessar(acesso:any){
   .subscribe(
 
     data => {
-      console.log(data);
+
+      // console.log(data);
 
       if(data.message == 'Usuario encontrado'){
 
-        // const redirect = this.usuarioService.redirectUrl ? this.usuarioService.redirectUrl : ''
-        this.router.navigate(['/Reserva']);
+        if(this.usuarioService.getAcesso() == 'Adm'){
+
+          this.nivelAcesso = 'Admin';
+          this.router.navigate(['/Reserves']);
+
+
+        }else if(this.usuarioService.getAcesso() == 'Cliente'){
+
+          this.nivelAcesso = 'Cliente';
+          this.router.navigate(['/']);
+
+        }
 
       }else if (data.message == 'Campo(s) vazio(s)'){
 

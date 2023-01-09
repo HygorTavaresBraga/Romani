@@ -31,8 +31,6 @@ export class ReserveComponent implements OnInit {
 
     }
 
-
-
   }
 
   private changeName(name: boolean): void{
@@ -40,20 +38,23 @@ export class ReserveComponent implements OnInit {
     this.loginBtn = !name;
   }
 
+  //Deslogar.
   logout(){
     this.usuarioService.deleteToken();
     window.location.href = window.location.href;
   }
 
+
   ngOnInit(): void {
 
-    this.auth = localStorage.getItem('token');
+    //Só permitir o Acesso se estiver logado.
+    // this.auth = localStorage.getItem('token');
 
-    if(!this.auth){
+    // if(!this.auth){
 
-      this.router.navigate(['/Acesso']);
+    //   this.router.navigate(['/Acesso']);
 
-    }
+    // }
 
   }
 

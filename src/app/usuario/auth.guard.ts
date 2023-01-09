@@ -19,10 +19,10 @@ export class AuthGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): any {
-    // return true;
 
       const routeUrl: string = state.url;
       return this.isLogin(routeUrl);
+
 
   }
 
@@ -32,7 +32,7 @@ export class AuthGuard implements CanActivate {
     }
 
     this.usuarioService.redirectUrl = routeUrl;
-    this.router.navigate(['/Acesso']), {queryParams: {returnUrl : routeUrl}}
+    this.router.navigate(['/']), {queryParams: {returnUrl : routeUrl}}
   }
 
 }
