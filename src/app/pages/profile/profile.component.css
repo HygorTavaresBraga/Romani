@@ -1,0 +1,36 @@
+section{
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+}
+
+#center{
+  background-color: #1b1b1b;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid var(--corPrincipalTrasnparente-color);
+  box-shadow: 2px 3px 3px 3px #1b1b1b;;
+}
+
+#content{
+  margin-top: 15px;
+}
+
+h1{
+  font-family: 'Poiret One', cursive;
+  font-size: 24px;
+  color: #fff;
+  text-shadow: 1px 2px 1px #000;
+  overflow-y: hidden;
+}
+
+h2{
+  overflow-y: hidden;
+  padding-left: 10%;
+  color: #fff;
+}
+
+
+

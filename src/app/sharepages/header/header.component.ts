@@ -14,10 +14,13 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
 
 acesso!: boolean;
+perfilBtn!: boolean;
 
 loginBtn:boolean;
 logoutBtn:boolean;
 
+
+path!: string;
 
 constructor(private usuarioService: UsuarioService, private router: Router){
 
@@ -32,10 +35,12 @@ constructor(private usuarioService: UsuarioService, private router: Router){
     if(this.usuarioService.getAcesso() == 'Adm'){
 
       this.acesso = true;
+      this.perfilBtn = false;
 
     }else{
 
       this.acesso = false;
+      this.perfilBtn = true;
 
     }
 
@@ -48,23 +53,25 @@ constructor(private usuarioService: UsuarioService, private router: Router){
   }
 
 
-
-
-
-
 }
-
-
 
 private changeName(name: boolean): void{
   this.logoutBtn = name;
   this.loginBtn = !name;
 }
 
+perfil(){
+  this.router.navigate(['/Perfil']);
+}
+
 logout(){
+
   this.usuarioService.deleteToken();
   this.usuarioService.deleteAcesso();
   window.location.href = window.location.href;
+
 }
+
+
 
 }

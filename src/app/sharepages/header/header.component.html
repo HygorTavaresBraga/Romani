@@ -40,6 +40,16 @@
             </li>
         </ul>
 
+        <ul class="navbar-nav" *ngIf="perfilBtn">
+          <li class="nav-item">
+              <button (click)="perfil()">
+
+                  <img src="../../../assets/header/profile.png" width="15" height="15">
+
+              </button>
+          </li>
+      </ul>
+
         <ul class="navbar-nav" *ngIf="logoutBtn">
           <li class="nav-item">
               <button (click)="logout()">

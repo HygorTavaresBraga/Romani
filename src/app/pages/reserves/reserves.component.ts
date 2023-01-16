@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { UsuarioService } from './../../usuario/usuario.service';
 import { ReservasService } from './../../services/reservas.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,7 +12,7 @@ export class ReservesComponent implements OnInit {
 
   reserves: any;
 
-  constructor( private reserveService: ReservasService ){ }
+  constructor( private reserveService: ReservasService, private usuarioService: UsuarioService, private router: Router ){ }
 
   ngOnInit(): void {
 
@@ -19,9 +21,12 @@ export class ReservesComponent implements OnInit {
         // console.log(result);
         this.reserves = result.data;
       }
+
     )
 
-
+    if(this.usuarioService.getAcesso() != 'Adm'){
+      this.router.navigate(['/Acesso']);
+    }
 
   }
 

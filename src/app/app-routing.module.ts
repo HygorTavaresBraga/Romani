@@ -7,7 +7,7 @@ import { AcessoComponent } from './pages/acesso/acesso.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './pages/menu/menu.component';
-// import { ProfileComponent } from './pages/profile/profile.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 import { ReserveComponent } from './pages/reserve/reserve.component';
 
 import { AuthService } from './usuario/auth.service';
@@ -21,7 +21,7 @@ const routes: Routes = [
   {path:'Reservas', component:ReservesComponent},
   {path:'Cardapio',component:MenuComponent},
   {path:'Sobre',component:AboutComponent},
-  // {path:'Perfil',component:ProfileComponent, canActivate: [AuthGuard]},
+  {path:'Perfil',component:ProfileComponent/*, canActivate: [AuthGuard]*/},
   {path:'Acesso', component:AcessoComponent},
   {path:'Cadastro', component:CadastroComponent},
   {path:'Editar', component:EditReserveComponent},
