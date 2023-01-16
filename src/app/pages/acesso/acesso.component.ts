@@ -59,7 +59,7 @@ acessar(acesso:any){
         }else if(this.usuarioService.getAcesso() == 'Cliente'){
 
           this.nivelAcesso = 'Cliente';
-          this.router.navigate(['/']);
+          this.router.navigate(['/Perfil']);
 
         }
 

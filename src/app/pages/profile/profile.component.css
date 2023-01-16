@@ -32,5 +32,57 @@ h2{
   color: #fff;
 }
 
+h6{
+  overflow-y: hidden;
+  color: rgb(131, 131, 131);
+  text-shadow: 1px 1px 1px var(--corPrincipalTrasnparente-color);
+}
+
+#tabela{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+thead{
+  color: #fff;
+  background-color: var(--corPrincipalTrasnparente-color);
+}
+
+tbody{
+  color: #cecece;
+  background-color: var(--corFooter-color);
+}
+
+.col-sm-7{
+  max-height: 80vh;
+  overflow-x: auto;
+}
+
+table{
+  border: 3px solid var(--corPrincipalTrasnparente-color);
+}
+
+button#cancelar{
+  width: 100%;
+  border: 0px;
+  border-radius: 1%;
+  font-family: var(--fontePrincipal-fonts);
+  font-size: 18px;
+  background-color: rgba(31, 8, 8, 0.9);
+  text-shadow: 2px 1px #000;
+  border-bottom: 3px #cecece;
+  color: #cecece;
+  transition: 1s;
+  overflow-y: hidden;
+}
+
+button#cancelar:hover{
+  background-color: rgb(31, 8, 8, 0.6);
+  transition: 1s;
+}
+
 
 

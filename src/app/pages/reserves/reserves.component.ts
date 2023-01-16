@@ -22,7 +22,7 @@ export class ReservesComponent implements OnInit {
         this.reserves = result.data;
       }
 
-    )
+    );
 
     if(this.usuarioService.getAcesso() != 'Adm'){
       this.router.navigate(['/Acesso']);

@@ -13,6 +13,53 @@
 
         <hr>
 
+        <div class="container-fluid">
+          <div id="tabela" class="row">
+
+            <div class="col-sm-7 p-0">
+
+              <table class="table text-center">
+                <thead>
+
+                  <tr>
+                    <th scope="col">Unidade</th>
+                    <th scope="col">Quantidade de Pessoas</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">Hora</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Ações</th>
+                  </tr>
+
+                </thead>
+                <tbody>
+
+                  <tr *ngFor="let reserva of reserves">
+                    <td>{{ reserva.unidade }}</td>
+                    <td>{{ reserva.qtdPessoas }}</td>
+                    <td>{{ reserva.data }}</td>
+                    <td>{{ reserva.hora }}</td>
+                    <td>{{ reserva.status }}</td>
+
+                    <td class="d-flex">
+
+                      <div>
+                        <a href="Editar/Reserva/{{reserva.idReserva}}">
+                          <button (click)="cancelarReserva(reserva)" id="cancelar">Cancelar</button>
+                        </a>
+                      </div>
+
+                    </td>
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+            </div>
+
+          </div>
+        </div>
+
       </div>
 
   </div>
