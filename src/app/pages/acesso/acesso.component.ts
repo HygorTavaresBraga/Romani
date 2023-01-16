@@ -54,7 +54,7 @@ acessar(acesso:any){
         if(this.usuarioService.getAcesso() == 'Adm'){
 
           this.nivelAcesso = 'Admin';
-          this.router.navigate(['/']);
+          this.router.navigate(['/Reservas']);
 
         }else if(this.usuarioService.getAcesso() == 'Cliente'){
 

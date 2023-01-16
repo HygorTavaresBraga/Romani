@@ -68,6 +68,11 @@ logout(){
 
   this.usuarioService.deleteToken();
   this.usuarioService.deleteAcesso();
+  this.usuarioService.deleteNome();
+  this.usuarioService.deleteCpf();
+  this.usuarioService.deleteTelefone();
+  this.usuarioService.deleteEmail();
+  this.usuarioService.deleteSenha();
   window.location.href = window.location.href;
 
 }

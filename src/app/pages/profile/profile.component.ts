@@ -21,6 +21,9 @@ export class ProfileComponent implements OnInit {
   //Mensagem
   mensagem!:string;
 
+  //Cliente
+  nomeCliente = this.usuarioService.getNome();
+
   //--------------------------
 
   adm:boolean = false;
@@ -42,7 +45,6 @@ export class ProfileComponent implements OnInit {
 
     }
 
-
     //---------------------------
 
     //Data
@@ -58,11 +60,11 @@ export class ProfileComponent implements OnInit {
     this.hora = Number(new Date().getHours());
 
     if(this.hora >= 0o6 && this.hora <= 12){
-      this.mensagem = 'Bom dia!';
+      this.mensagem = 'Bom Dia ';
     }else if(this.hora > 12 && this.hora <= 18){
-      this.mensagem = 'Boa tarde!';
+      this.mensagem = 'Boa Tarde ';
     }else{
-      this.mensagem = 'Boa noite!';
+      this.mensagem = 'Boa Noite ';
     }
 
     //----------------
