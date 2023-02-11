@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { UsuarioService } from './../../usuario/usuario.service';
 import { ReservasService } from './../../services/reservas.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-reserves',
@@ -18,7 +18,6 @@ export class ReservesComponent implements OnInit {
 
     this.reserveService.getReserves().subscribe(
       (result:any)=>{
-        // console.log(result);
         this.reserves = result.data;
       }
 
@@ -30,8 +29,26 @@ export class ReservesComponent implements OnInit {
 
   }
 
-  editarReserva(id:any){
+  editarReserva(reserva:any){
 
+    localStorage.setItem('idReserva', reserva.idReserva);
+    localStorage.setItem('idUsuario', reserva.idUsuario);
+    localStorage.setItem('unidade', reserva.unidade);
+    localStorage.setItem('qtdPessoas', reserva.qtdPessoas);
+    localStorage.setItem('data', reserva.data);
+    localStorage.setItem('hora', reserva.hora);
+    localStorage.setItem('status', reserva.status);
+
+  }
+
+  clearEditStorage(){
+    localStorage.removeItem('idReserva');
+    localStorage.removeItem('idUsuario');
+    localStorage.removeItem('unidade');
+    localStorage.removeItem('qtdPessoas');
+    localStorage.removeItem('data');
+    localStorage.removeItem('hora');
+    localStorage.removeItem('status');
   }
 
   excluirReserva(reserve:any){

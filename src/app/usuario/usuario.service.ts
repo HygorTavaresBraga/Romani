@@ -17,9 +17,12 @@ export class UsuarioService {
 
   @Output() getLoggedInName: EventEmitter<any> = new EventEmitter();
 
-
   createClient(client:any) {
     return this.http.post(this.url+'insert.php', client);
+  }
+
+  createReserve(reserve:any) {
+    return this.http.post(this.url+'reservar.php', reserve);
   }
 
   public login(email:any, senha:any){

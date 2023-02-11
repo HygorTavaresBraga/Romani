@@ -5,29 +5,32 @@
 
           <div class="agendamento-area">
               <div class="titulo">
-                  <!-- <h1>Editar Reserva #{{reserve.idReserve}}</h1> -->
+                  <h1>Editar Reserva nº {{ idReserva }}</h1>
               </div>
 
               <div class="agendamento">
                   <div class="row">
                       <div class="col-sm-6 mx-auto">
 
-
                   <form class="mt-4 mb-4">
+
+                    <input hidden id="idReserva" name="idReserva" type="text" value="{{ idReserva }}">
+
                       <div class="mb-3">
                         <label for="Unidade" class="form-label">Unidade</label>
                         <select name="Unidade" id="Unidade" class="form-select">
-                            <option value="Botafogo" selected>Botafogo</option>
-                            <option value="Barra da Tijuca" disabled>Barra da Tijuca</option>
-                            <option value="Leblon" disabled>Leblon</option>
+                            <option value="{{ unidade }}" selected hidden>{{ unidade }}</option>
+                            <option value="Botafogo">Botafogo</option>
+                            <option value="Barra da Tijuca">Barra da Tijuca</option>
+                            <option value="Leblon">Leblon</option>
                           </select>
-                          <div id="aviso" class="form-text">No momento somente a unidade de botafogo realiza reservas online.</div>
                       </div>
 
                       <div class="mb-3">
                         <label for="Pessoas" class="form-label">Pessoa(s)</label>
                         <select name="Pessoa" id="Pessoa" class="form-select">
                           <option value="Selecione" hidden>Selecione a quantidade</option>
+                          <option value="{{ qtdPessoas }}" selected hidden>{{ qtdPessoas + " Pessoas" }}</option>
                           <option value=1>1 Pessoa</option>
                           <option value=2>2 Pessoas</option>
                           <option value=3>3 Pessoas</option>
@@ -39,18 +42,18 @@
 
                       <div class="mb-3">
                           <label for="Data" class="form-label">Data</label>
-                          <input type="date" name="Data" id="Data" class="form-control">
+                          <input type="date" name="Data" id="Data" value="{{ data }}" class="form-control">
                       </div>
 
                       <div class="mb-3">
                           <label for="Horario" class="form-label">Horário</label>
-                          <input type="time" name="Horario" id="Horario" class="form-control">
+                          <input type="time" name="Horario" id="Horario" value="{{ hora }}" class="form-control">
                       </div>
 
                       <div class="mb-3">
                         <label for="Status" class="form-label">Status</label>
                         <select name="Status" id="Status" class="form-select">
-                            <option value="" selected hidden></option>
+                            <option value="{{ status }}" selected hidden>{{ status }}</option>
                             <option value="Reservado">Reservado</option>
                             <option value="Cancelado">Cancelado</option>
                             <option value="Expirado">Expirado</option>

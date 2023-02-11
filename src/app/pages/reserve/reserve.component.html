@@ -13,42 +13,43 @@
                         <div class="col-sm-6 mx-auto">
 
 
-                    <form class="mt-4 mb-4">
+                    <form [formGroup]="reserva" novalidate class="mt-4 mb-4">
+
                         <div class="mb-3">
                           <label for="Unidade" class="form-label">Unidade</label>
-                          <select name="Unidade" id="Unidade" class="form-select">
-                              <option value="Botafogo" selected>Botafogo</option>
-                              <option value="Barra da Tijuca" disabled>Barra da Tijuca</option>
-                              <option value="Leblon" disabled>Leblon</option>
+                          <select formControlName="unidade" name="Unidade" id="Unidade" class="form-select">
+                              <option value="Botafogo">Botafogo</option>
+                              <option value="Barra da Tijuca">Barra da Tijuca</option>
+                              <option value="Leblon">Leblon</option>
                             </select>
                             <div id="aviso" class="form-text">No momento somente a unidade de botafogo realiza reservas online.</div>
                         </div>
 
                         <div class="mb-3">
                           <label for="Pessoas" class="form-label">Pessoa(s)</label>
-                          <select name="Pessoa" id="Pessoa" class="form-select">
+                          <select formControlName="qtdPessoas" name="Pessoa" id="Pessoa" class="form-select">
                             <option value="Selecione" hidden>Selecione a quantidade</option>
-                            <option value=1>1 Pessoa</option>
-                            <option value=2>2 Pessoas</option>
-                            <option value=3>3 Pessoas</option>
-                            <option value=4>4 Pessoas</option>
-                            <option value=5>5 Pessoas</option>
-                            <option value=6>6 Pessoas</option>
+                            <option value='1 Pessoa'>1 Pessoa</option>
+                            <option value='2 Pessoas'>2 Pessoas</option>
+                            <option value='3 Pessoas'>3 Pessoas</option>
+                            <option value='4 Pessoas'>4 Pessoas</option>
+                            <option value='5 Pessoas'>5 Pessoas</option>
+                            <option value='6 Pessoas'>6 Pessoas</option>
                         </select>
                         </div>
 
                         <div class="mb-3">
                             <label for="Data" class="form-label">Data</label>
-                            <input type="date" name="Data" id="Data" class="form-control">
+                            <input formControlName="data" type="date" name="Data" id="Data" class="form-control">
                         </div>
 
                         <div class="mb-3">
                             <label for="Horario" class="form-label">Horário</label>
-                            <input type="time" name="Horario" id="Horario" class="form-control">
+                            <input formControlName="hora" type="time" name="Horario" id="Horario" class="form-control">
                         </div>
 
                         <div class="mb-3" *ngIf="logoutBtn">
-                            <button  class="btn btn-primary">Reservar</button>
+                            <button (click)="reservar()" class="btn btn-primary">Reservar</button>
                         </div>
 
                         <div class="mb-3" *ngIf="loginBtn">
