@@ -12,14 +12,12 @@
                   <div class="row">
                       <div class="col-sm-6 mx-auto">
 
-                  <form class="mt-4 mb-4">
-
-                    <input hidden id="idReserva" name="idReserva" type="text" value="{{ idReserva }}">
+                  <form [formGroup]="edicao" novalidate class="mt-4 mb-4">
 
                       <div class="mb-3">
                         <label for="Unidade" class="form-label">Unidade</label>
-                        <select name="Unidade" id="Unidade" class="form-select">
-                            <option value="{{ unidade }}" selected hidden>{{ unidade }}</option>
+                        <select name="Unidade" id="Unidade" formControlName="Unidade" class="form-select">
+                            <option style="font-weight: bolder; background-color: #000;" disabled >No Momento: {{ unidade }}</option>
                             <option value="Botafogo">Botafogo</option>
                             <option value="Barra da Tijuca">Barra da Tijuca</option>
                             <option value="Leblon">Leblon</option>
@@ -28,9 +26,8 @@
 
                       <div class="mb-3">
                         <label for="Pessoas" class="form-label">Pessoa(s)</label>
-                        <select name="Pessoa" id="Pessoa" class="form-select">
-                          <option value="Selecione" hidden>Selecione a quantidade</option>
-                          <option value="{{ qtdPessoas }}" selected hidden>{{ qtdPessoas + " Pessoas" }}</option>
+                        <select name="Pessoa" id="Pessoa" formControlName="Pessoa" class="form-select">
+                          <option style="font-weight: bolder; background-color: #000;" disabled >No Momento: {{ qtdPessoas }}</option>
                           <option value=1>1 Pessoa</option>
                           <option value=2>2 Pessoas</option>
                           <option value=3>3 Pessoas</option>
@@ -42,18 +39,20 @@
 
                       <div class="mb-3">
                           <label for="Data" class="form-label">Data</label>
-                          <input type="date" name="Data" id="Data" value="{{ data }}" class="form-control">
+                          <input type="date" name="Data" id="Data" formControlName="Data" value="{{ data }}" class="form-control">
+                          <div class="form-text" style="background-color: #000; text-align: center;">Data Reservada: {{ _dataFormatada }}</div>
                       </div>
 
                       <div class="mb-3">
                           <label for="Horario" class="form-label">Horário</label>
-                          <input type="time" name="Horario" id="Horario" value="{{ hora }}" class="form-control">
-                      </div>
+                          <input type="time" name="Horario" id="Horario" formControlName="Horario" value="{{ hora }}" class="form-control">
+                          <div class="form-text" style="background-color: #000; text-align: center;">Hora Reservada: {{ _horaFormatada }}</div>
+                        </div>
 
                       <div class="mb-3">
                         <label for="Status" class="form-label">Status</label>
-                        <select name="Status" id="Status" class="form-select">
-                            <option value="{{ status }}" selected hidden>{{ status }}</option>
+                        <select name="Status" id="Status" formControlName="Status" class="form-select">
+                            <option style="font-weight: bolder; background-color: #000;" disabled >No Momento: {{ status }}</option>
                             <option value="Reservado">Reservado</option>
                             <option value="Cancelado">Cancelado</option>
                             <option value="Expirado">Expirado</option>
@@ -61,7 +60,7 @@
                       </div>
 
                       <div class="mb-3">
-                          <button type="submit" class="btn btn-primary">Editar</button>
+                        <button type="button" (click)="editar()">Editar</button>
                       </div>
                   </form>
 

@@ -25,6 +25,10 @@ export class UsuarioService {
     return this.http.post(this.url+'reservar.php', reserve);
   }
 
+  editReserve(reserve:any) {
+    return this.http.put(this.url+'editarReserva.php', reserve);
+  }
+
   public login(email:any, senha:any){
 
     return this.http.post<any>(this.url + 'login.php', { email, senha } )

@@ -38,7 +38,6 @@ export class ReserveComponent implements OnInit {
 
     if(this.usuarioService.isLoggedIn()){
 
-      console.log('logado');
       this.loginBtn = false;
       this.logoutBtn = true;
 
@@ -55,15 +54,6 @@ export class ReserveComponent implements OnInit {
 
   ngOnInit(): void {
 
-    //Só permitir o Acesso se estiver logado.
-    // this.auth = localStorage.getItem('token');
-
-    // if(!this.auth){
-
-    //   this.router.navigate(['/Acesso']);
-
-    // }
-
   }
 
   private changeName(name: boolean): void{
@@ -73,42 +63,32 @@ export class ReserveComponent implements OnInit {
 
   reservar(){
 
-    console.log(this.reserva.get('token').value);
-    console.log(this.reserva.get('unidade').value);
-    console.log(this.reserva.get('qtdPessoas').value);
-    console.log(this.reserva.get('data').value);
-    console.log(this.reserva.get('hora').value);
+    if(this.reserva.get('unidade').value == 'Barra da Tijuca'){
 
-    if(
+      alert('Unidade Barra da Tijuca não disponível para reservas online.');
 
-        this.reserva.get('token').value != '' &&
+    }else if(this.reserva.get('unidade').value == 'Leblon'){
+
+      alert('Unidade Leblon não disponível para reservas online.');
+
+    }else{
+
+      if(
+
+        this.reserva.get('token').value != 0 &&
         this.reserva.get('unidade').value != '' &&
         this.reserva.get('qtdPessoas').value != '' &&
         this.reserva.get('data').value != '' &&
         this.reserva.get('hora').value != ''
 
       ){
-
-        if(this.reserva.get('unidade').value == 'Barra da Tijuca'){
-
-          alert('Unidade Barra da Tijuca não disponível para reservas online.');
-
-        }else if(this.reserva.get('unidade').value == 'Leblon'){
-
-          alert('Unidade Leblon não disponível para reservas online.');
-
-        }else{
-
-          this.usuarioService.createReserve(this.reserva.value).subscribe();
-          // this.router.navigate(['Perfil']);
-
-        }
+        this.usuarioService.createReserve(this.reserva.value).subscribe();
+        // this.router.navigate(['Perfil']);
+      }
 
     }
 
-
-
-    };
+  };
 
   //Deslogar.
   logout(){
